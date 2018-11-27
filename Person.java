@@ -5,6 +5,8 @@
  */
 package exercisepem;
 
+import java.time.Year;
+
 /**
  *
  * @author marka
@@ -50,16 +52,17 @@ public class Person {
         return birth_year;
     }
     
+    public double getAge(double birth_year){
+        int year = Year.now().getValue();  // In order to take the year number correctly every time you want to use that method.
+        return age = year - birth_year;
+    }
+    
     public void setName(String name) {
         this.name = name;
     }
 
     public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public void setAge(double age) {
-        this.age = age;
     }
 
     public void setBirth_day(double birth_day) {
@@ -74,10 +77,8 @@ public class Person {
         this.birth_year = birth_year;
     }
     
-    
-    public double Age(double birth_year){
-        double ageNow;
-        return ageNow = 2018 - birth_year;
+    public void setAge(double age){
+        this.age = age;
     }
       
 }
