@@ -12,8 +12,8 @@ package exercisepem;
 public class Employee extends Person{
     private double salary;
             
-    public Employee(String name, String surname, double birth_day, double birth_month, double birth_year, double age, double salary) {
-        super(name, surname, birth_day, birth_month, birth_year, age);
+    public Employee(String name, String surname, int birth_year, double salary) {
+        super(name, surname, birth_year);
         this.salary = salary;
         
     }
