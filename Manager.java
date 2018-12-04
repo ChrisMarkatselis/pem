@@ -12,8 +12,8 @@ package exercisepem;
 public class Manager extends Employee{
     private double bonus;
     
-    public Manager(String name, String surname, double birth_day, double birth_month, double birth_year, double age, double salary, double bonus) {
-        super(name, surname, birth_day, birth_month, birth_year, age, salary);
+    public Manager(String name, String surname, int birth_year, double salary, double bonus) {
+        super(name, surname, birth_year, salary);
         this.bonus = bonus;
     }
 
