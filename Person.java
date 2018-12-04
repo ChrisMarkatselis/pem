@@ -14,18 +14,12 @@ import java.time.Year;
 public class Person {
     private String name;
     private String surname;
-    private double birth_day;
-    private double birth_month;
-    private double birth_year;
-    private double age;
+    private int birth_year;
 
-    public Person(String name, String surname, double birth_day, double birth_month, double birth_year, double age) {
+    public Person(String name, String surname, double birth_year) {
         this.name = name;
         this.surname = surname;
-        this.birth_day = birth_day;
-        this.birth_month = birth_month;
         this.birth_year = birth_year;
-        this.age = age;
     }
 
     public String getName() {
@@ -40,19 +34,11 @@ public class Person {
         return age;
     }
 
-    public double getBrith_day() {
-        return birth_day;
-    }
-
-    public double getBrith_month() {
-        return birth_month;
-    }
-    
     public double getBrith_year() {
         return birth_year;
     }
     
-    public double getAge(double birth_year){
+    public int Age(int birth_year){
         int year = Year.now().getValue();  // In order to take the year number correctly every time you want to use that method.
         return age = year - birth_year;
     }
@@ -65,20 +51,7 @@ public class Person {
         this.surname = surname;
     }
 
-    public void setBirth_day(double birth_day) {
-        this.birth_day = birth_day;
-    }
-    
-    public void setBirth_month(double birth_month) {
-        this.birth_month = birth_month;
-    }
-    
     public void setBirth_year(double birth_year) {
         this.birth_year = birth_year;
     }
-    
-    public void setAge(double age){
-        this.age = age;
-    }
-      
 }
